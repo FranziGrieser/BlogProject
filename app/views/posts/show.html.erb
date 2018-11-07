@@ -10,7 +10,7 @@
     <%= @post.intro %>
   </p>
   <p>
-    <%= @post.content %><br><br>
+    <%= simple_format(@post.content) %><br><br>
   </p>
   <p>
     <em><%= (@post.created_at).strftime("%B %e, %Y at %I:%M %p") %></em>
