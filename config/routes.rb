@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'pages#index'
+  root 'posts#index'
+  resources :posts 
   get 'pages/index'
   get 'pages/about'
   get 'pages/contact'
