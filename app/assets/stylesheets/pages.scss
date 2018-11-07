@@ -1,3 +1,85 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  display: flex;
+  min-height: 100vh;
+  margin: 0 auto;
+  flex-direction: column;
+  background-color: #fffeea;
+}
+
+/**** Fonts ****/
+h1 {
+  font-family: 'Anton', Futura, Verdana, sans-serif;
+  letter-spacing: 0.1em;
+}
+
+h2 {
+  font-family: Spinnaker, Futura, Verdana, sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+
+p {
+  font-family: Spinnaker, Futura, Verdana, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.navbar-brand {
+  font-family: 'Anton', Futura, Verdana, sans-serif;
+  letter-spacing: 0.1em;
+}
+.nav-item {
+  font-family: "Quattrocento Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 19.4px
+}
+
+/***** shared Navs and Jumbotron *****/
+.navbar {
+  background-color: #73A580  !important;
+}
+
+.navbar a{
+  color: #94ECBE;
+  text-decoration: none;
+}
+
+.nav-item {
+  padding: 10px;
+}
+
+.container {
+  min-height: 100px;
+  flex: 1;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.jumbotron {
+  background-color: #1E3F20;
+  color: #fffeea;
+  text-align: center;
+  font-weight: 800;
+}
+
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  background-color: #73A580 !important;
+
+}

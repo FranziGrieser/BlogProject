@@ -1,3 +1,73 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/***** index ****/
+.posts {
+  border-radius: 5px;
+  }
+
+.card {
+  width: 18rem;
+  height: 420px;
+}
+
+.card-title {
+  padding-top: 10px;
+  text-align: center
+}
+
+.card-subtitle {
+  text-align: center;
+}
+.card-text {
+  padding: 10px;
+}
+
+.card-link { text-align: center; }
+
+@media (min-width: 576px) {
+    .card-columns {
+        column-count: 1;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .card-columns {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 992px) {
+    .card-columns {
+        column-count: 3;
+    }
+  }
+
+@media (min-width: 1200px) {
+    .card-columns {
+        column-count: 4;
+    }
+}
+
+/***** show *****/
+.input {
+  border-radius: 5px;
+  border: solid 1px #d5d5d5;
+  padding: 5px;
+  resize: none;
+}
+
+.field {
+  font-size: 14px;
+}
+
+select {
+  padding: 10px 5px;
+  background-color: #7DAA92;
+  color: white;
+  border-color: #7DAA92;
+  border-radius: 5px;
+  size: 30;
+}
