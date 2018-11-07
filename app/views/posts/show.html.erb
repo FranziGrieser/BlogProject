@@ -1,0 +1,19 @@
+<section class="container">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <%= image_tag(@post.image, class: "img-fluid") %>
+  </p>
+    <h2><%= @post.title %></h2>
+    <hr>
+  <p>
+    <%= @post.intro %>
+  </p>
+  <p>
+    <%= @post.content %><br><br>
+  </p>
+  <p>
+    <em><%= (@post.created_at).strftime("%B %e, %Y at %I:%M %p") %></em>
+  </p>
+  <%= link_to 'Edit', edit_post_path(@post) %> | <%= link_to 'Back', posts_path %><br><br>
+</section>
