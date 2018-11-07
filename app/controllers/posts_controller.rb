@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
-  before_actrion :set_post, only [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
     if params[:category].blank?
-      @posts = Post.all.order("created_ad DESC")
+      @posts = Post.all.order("created_at DESC")
     else
       @category_id = Category.find_by(name: params[:category]).id
       @posts = Post.where(category_id: @category_id).order("created_at DESC")
@@ -25,17 +25,18 @@ class PostsController < ApplicationController
 
     respond to do |format|
       if @post.save
-      format.html { redirect_to @post, notice: 'Post was successfully created.' }
-      format.json { render :show, status: :created, location: @post }
-    else
-      format.html { render :new }
-      format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.json { render :show, status: :created, location: @post }
+      else
+        format.html { render :new }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
+      end
     end
   end
 
   def update
     respond_to do |format|
-      if @post.update(article_params)
+      if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @post }
       else
@@ -53,15 +54,16 @@ class PostsController < ApplicationController
      end
    end
 
-private
+  private
 
-  # Use callbacks to share common setup or constraints between actions.
-  def set_post
-    @psot= Post.find(params[:id])
-  end
+    # Use callbacks to share common setup or constraints between actions.
+    def set_post
+      @post= Post.find(params[:id])
+    end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
-  def post_params
-    params.require(:post).permit(:image, :category_id, :title, :intro, :content)
-  end
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def post_params
+      params.require(:post).permit(:image, :category_id, :title, :intro, :content)
+    end
+
 end

@@ -4,13 +4,15 @@
   <p class="lead">Read more about it here</p>
 <nav>
 
-  <% Category.all.each do |category| %>
     <ul class="nav justify-content-center">
+      <% Category.all.each do |category| %>
+
     <li class="nav-item">
       <%= link_to category.name, posts_path(category: category.name) %>
     </li>
+    <% end %>
+
       </ul>
-  <% end %>
 
 </nav>
 </div>

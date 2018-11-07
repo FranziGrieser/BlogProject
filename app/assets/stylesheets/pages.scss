@@ -10,6 +10,14 @@ body {
   background-color: #fffeea;
 }
 
+
+.container {
+  min-height: 100px;
+  flex: 1;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
 /**** Fonts ****/
 h1 {
   font-family: 'Anton', Futura, Verdana, sans-serif;
@@ -34,20 +42,22 @@ p {
   line-height: 20px;
 }
 
+/***** shared Navs and Jumbotron *****/
 .navbar-brand {
   font-family: 'Anton', Futura, Verdana, sans-serif;
   letter-spacing: 0.1em;
 }
+
 .nav-item {
   font-family: "Quattrocento Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-variant: normal;
   font-weight: 500;
-  line-height: 19.4px
+  line-height: 19.4px;
+  padding: 10px;
 }
 
-/***** shared Navs and Jumbotron *****/
 .navbar {
   background-color: #73A580  !important;
 }
@@ -57,17 +67,6 @@ p {
   text-decoration: none;
 }
 
-.nav-item {
-  padding: 10px;
-}
-
-.container {
-  min-height: 100px;
-  flex: 1;
-  margin-top: 60px;
-  margin-bottom: 20px;
-}
-
 .jumbotron {
   background-color: #1E3F20;
   color: #fffeea;
@@ -75,11 +74,50 @@ p {
   font-weight: 800;
 }
 
+/**** list-items ***/
+ul li {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/******* Links ****/
+a {
+  color: #000;
+
+  &:visited {
+    color: #666;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #1E3F20;
+    padding: 5px;
+    text-decoration: none;
+  }
+}
+
+/***** Notes/ Alerts **/
+#notice {
+  color: #7DAA92;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid #8E4A49;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
 
 footer {
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
   background-color: #73A580 !important;
-
 }
