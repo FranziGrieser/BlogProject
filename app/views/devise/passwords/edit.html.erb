@@ -11,7 +11,7 @@
       <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> characters minimum)</em><br />
       <% end %>
-      <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
+      <%= f.password_field :password, autofocus: true, autocomplete: "new-password", class: "input" %>
     </div>
 
     <div class="field">
@@ -20,7 +20,7 @@
     </div>
 
     <div class="actions">
-      <%= f.submit "Change my password" %>
+      <%= f.submit "Change my password", class: "btn btn-light" %>
     </div>
   <% end %>
 
