@@ -10,7 +10,6 @@ body {
   background-color: #fffeea;
 }
 
-
 .container {
   min-height: 100px;
   flex: 1;
@@ -90,29 +89,10 @@ a {
 
   &:hover {
     color: #fff;
-    background-color: #1E3F20;
+    background-color: transparent;
     padding: 5px;
     text-decoration: none;
   }
-}
-
-/***** Notes/ Alerts **/
-#notice {
-  color: #7DAA92;
-}
-
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
-}
-
-#error_explanation {
-  width: 450px;
-  border: 2px solid #8E4A49;
-  padding: 7px 7px 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
 }
 
 footer {
