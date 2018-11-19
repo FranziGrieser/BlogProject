@@ -5,11 +5,12 @@ class Ability
     # Define abilities for the passed in user here. For example:
     #
       user ||= User.new # guest user (not logged in)
-  #     if user.admin?
-  #       can :manage, :all
-  #     else
+      if user.admin?
+         can :manage, :all
+       else
          can :manage, User, id: user.id
          can :read, Post
+    #     can :create, Post, id: user.id
        end
     #
     # The first argument to `can` is the action you are giving the user
@@ -29,5 +30,5 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
-#  end
+  end
 end

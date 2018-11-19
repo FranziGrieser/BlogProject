@@ -26,7 +26,12 @@
     <%= form.text_field :last_name %>
   </div>
 
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+  </div>
+
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit(class: "btn btn-dark") %>
   </div>
 <% end %>
