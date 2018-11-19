@@ -1,5 +1,30 @@
 <section class="container">
-  <h1>Contact</h1>
+  <h1>Contact me</h1>
+  <%= flash[:notice] %>
+  <%= form_with(url:"/pages/thank_you", method: "post", local: true) do |form| %>
+  <div calss="row">
+    <div class="form-group">
+      <%= form.label :name %>
+      <%= form.text_field :name, class: "input", placeholder: "Please enter your name", required: true %>
+    </div>
+    <div class="form-group">
+      <%= form.label :subject %>
+      <%= form.text_field :subject, class: "input", placeholder: "Add a subject" %>
+    </div>
+    <div class="form-group">
+      <%= form.label :email %>
+      <%= form.email_field :email, class: "input", placeholder: "Please enter your Email-address here", required: true %>
+    </div>
+    <div class="form-group">
+      <%= form.label :message %>
+      <%= form.text_area :message, class: "input", rows: 5, placeholder: "Write your message here", required: true %>
+    </div>
+    <div class="actions">
+      <%= form.submit "Send", class: "btn btn-dark" %>
+    </div>
+    <% end %>
+  </div><!-- /row -->
+
   <p>Tousled 8-bit lumbersexual four dollar toast jean shorts distillery. Health
     goth vexillologist squid keytar gentrify. Activated charcoal enamel pin af,
     fanny pack pop-up mumblecore letterpress you probably haven't heard of them.

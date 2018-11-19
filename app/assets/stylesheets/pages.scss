@@ -83,15 +83,15 @@ ul li {
 }
 
 /******* Links ****/
-a {
+nav a {
   color: #000;
 
   &:visited {
-    color: #000;
+    color: #fff;
   }
 
   &:hover {
-    color: #649EEE;
+    color: #0C558D;
     background-color: transparent;
     text-decoration: none;
   }
