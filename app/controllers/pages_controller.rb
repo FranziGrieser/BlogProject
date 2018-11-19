@@ -13,9 +13,6 @@ class PagesController < ApplicationController
     @subject = params[:subject]
     @email = params[:email]
     @message = params[:message]
-    ActionMailer::Base.mail(from: @email,
-      to: 'franzi.grieser@yahoo.de',
-      subject: @subject,
-      body: @message).deliver_now
+    UserMailer.contact_form(@email, @subject, @message).deliver_now
   end
 end
