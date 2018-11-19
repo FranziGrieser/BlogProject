@@ -33,12 +33,12 @@ h2 {
 }
 
 p {
-  font-family: Spinnaker, Futura, Verdana, sans-serif;
-  font-size: 14px;
+  font-family: "Architects Daughter", Spinnaker, Futura, Verdana, sans-serif;
+  font-size: 16px;
   font-style: normal;
   font-variant: normal;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 22px;
 }
 
 /***** shared Navs and Jumbotron *****/
@@ -58,16 +58,19 @@ p {
 }
 
 .navbar {
-  background-color: #73A580  !important;
+  background-color: #649EEE  !important;
 }
 
 .navbar a{
-  color: #94ECBE;
+  color: white;
   text-decoration: none;
 }
 
 .jumbotron {
-  background-color: #1E3F20;
+  background-image: url('1pic.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
   color: #fffeea;
   text-align: center;
   font-weight: 800;
@@ -84,13 +87,12 @@ a {
   color: #000;
 
   &:visited {
-    color: #666;
+    color: #000;
   }
 
   &:hover {
-    color: #fff;
+    color: #649EEE;
     background-color: transparent;
-    padding: 5px;
     text-decoration: none;
   }
 }
@@ -99,5 +101,5 @@ footer {
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
-  background-color: #73A580 !important;
+  background-color: #649EEE !important;
 }
