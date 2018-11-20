@@ -9,8 +9,7 @@ class Ability
          can :manage, :all
        else
          can :manage, User, id: user.id
-         can :read, Post
-    #     can :create, Post, id: user.id
+         can :manage, Post, id: user.id
        end
     #
     # The first argument to `can` is the action you are giving the user
