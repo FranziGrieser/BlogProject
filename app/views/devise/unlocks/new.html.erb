@@ -6,12 +6,12 @@
     <%= devise_error_messages! %>
 
     <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= f.label :email %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input" %>
     </div>
 
     <div class="actions">
-      <%= f.submit "Resend unlock instructions" %>
+      <%= f.submit "Resend unlock instructions", class: "btn btn-dark" %>
     </div>
   <% end %>
 

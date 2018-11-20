@@ -9,7 +9,7 @@
 
 .card {
   width: 18rem;
-  height: 425px;
+  height: 280px;
 }
 
 .card-title {
@@ -50,24 +50,30 @@
     }
 }
 
-/***** show *****/
+/***** forms *****/
+label {
+  font-family: "Quattrocento Sans", Helvetica, sans-serif;
+  font-size: 16px;
+}
 .input {
   border-radius: 5px;
   border: solid 1px #d5d5d5;
   padding: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   resize: none;
 }
 
 .field {
-  font-size: 14px;
+  font-size: 16px;
+  font-family: "Quattrocento Sans", Helvetica, sans-serif;
+
 }
 
 select {
   padding: 10px 5px;
-  background-color: #7DAA92;
+  background-color: #649EEE;
   color: white;
-  border-color: #7DAA92;
+  border-color: #649EEE;
   border-radius: 5px;
-  size: 30;
+  margin-bottom: 10px;
 }

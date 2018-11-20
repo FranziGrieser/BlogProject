@@ -12,28 +12,28 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :image %><br>
-    <%= form.text_field :image, size: 30, class: "input" %><br><br>
+    <%= form.label :image %>
+    <%= form.text_field :image, size: 30, class: "input" %>
   </div>
 
   <div class="field">
-    <%= form.label :category_id %><br>
-    <%= form.collection_select(:category_id, Category.all, :id, :name, {prompt: "Choose a category"}) %><br><br>
+    <%= form.label :category_id %>
+    <%= form.collection_select(:category_id, Category.all, :id, :name, {prompt: "Choose a category"}) %>
   </div>
 
   <div class="field">
-    <%= form.label :title %><br>
-    <%= form.text_field :title, size: 30, class: "input", placeholder: "Type the Post title here" %><br><br>
+    <%= form.label :title %>
+    <%= form.text_field :title, size: 30, class: "input", placeholder: "Type the Post title here" %>
   </div>
 
   <div class="field">
-    <%= form.label :intro %><br>
-    <%= form.text_area :intro, cols: 30, rows: 5, class: "input", placeholder: "Type the Post introduction here" %><br><br>
+    <%= form.label :intro %>
+    <%= form.text_area :intro, cols: 30, rows: 5, class: "input", placeholder: "Type the Post introduction here" %>
   </div>
 
   <div class="field">
-    <%= form.label :content %><br>
-    <%= form.text_area :content, cols: 30, rows: 15, class: "input", placeholder: "Type the Post content here" %><br><br>
+    <%= form.label :content %>
+    <%= form.text_area :content, cols: 30, rows: 15, class: "input", placeholder: "Type the Post content here" %>
   </div>
 
   <div class="actions">
