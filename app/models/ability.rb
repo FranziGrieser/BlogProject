@@ -10,6 +10,7 @@ class Ability
        else
          can :manage, User, id: user.id
          can :manage, Post, id: user.id
+         can :manage, Comment, id: user.id
        end
     #
     # The first argument to `can` is the action you are giving the user
