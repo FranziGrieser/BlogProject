@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }
   resources :users
   root 'posts#index'
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
   get 'pages/index'
   get 'pages/about'
   get 'pages/contact'

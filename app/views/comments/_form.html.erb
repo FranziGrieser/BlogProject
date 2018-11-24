@@ -1,0 +1,16 @@
+<% if signed_in? %>
+  <h2>Add a comment:</h2>
+  <%= form_for([@post, @post.comments.build], remote: true) do |f| %>
+    <div class="field">
+      <%= f.label :name, "Name:" %>
+      <%= f.text_field :name, size: 30, class: "input", placeholder: "Your Name", require: true %>
+    </div>
+    <div class="field">
+      <%= f.label :body, "Comment:" %>
+      <%= f.text_area :body, cols: 30, rows: 10, class:"input", placeholder: "Your Comment", require: true %>
+    </div>
+    <div class="actions">
+      <%= f.submit(class: "btn btn-dark") %>
+    </div>
+  <% end %>
+<% end %>
