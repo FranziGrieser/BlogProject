@@ -16,9 +16,9 @@
   </p>
   <br />
   <h2><%= @post.comments.count %> Comments </h2>
-  <%= render 'new_comment' %>
+  <%= render 'posts/new_comment' %>
   <div class="post-comments">
-    <%= render 'comments' %>
+    <%= render 'posts/comments' %>
   </div>
   <% if (signed_in? && ((current_user.id == @post.user_id) || current_user.admin?)) %>
   <%= link_to 'Edit', edit_post_path(@post) %> | <% end %> <%= link_to 'Back', posts_path %><br><br>
