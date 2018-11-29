@@ -5,13 +5,15 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = @post.comments.new(comment_params)
     @comment.user = current.user
+    @user = current_user
+
     respond_to do |format|
       if @comment.save
         format.html { redirect_to @post, notice: 'Your comment has been saved successfully.' }
         format.json { render :show, status: :created, location: @post }
         format.js
       else
-        format.html { redirect_to @post, alter: 'Your comment was not saved' }
+        format.html { redirect_to @post, alert: 'Your comment was not saved' }
         format.json { render json: @comment.errors, status :unprocessable_entity }
       end
     end
