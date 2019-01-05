@@ -6,6 +6,22 @@
     <%= devise_error_messages! %>
 
     <div class="field">
+      <%= f.label :user_name %>
+      <%= f.text_field :user_name, class: "input" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name, class: "input" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name, class: "input" %>
+    </div>
+
+
+    <div class="field">
       <%= f.label :email %>
       <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input" %>
     </div>
@@ -13,7 +29,7 @@
     <div class="field">
       <%= f.label :password %>
       <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <em>(<%= @minimum_password_length %> characters minimum)</em><br>
       <% end %>
       <%= f.password_field :password, autocomplete: "new-password", class: "input" %>
     </div>
