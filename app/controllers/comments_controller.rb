@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
         format.json { render :show, status: :created, location: @post }
         format.js
       else
-        format.html { redirect_to @post, alert: 'Your comment was not saved' }
+        format.html { redirect_to @post, alert: 'Your comment was not saved.' }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
@@ -23,7 +23,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     post = @comment.post
     @comment.destroy
-    redirect_to @post, alert: 'Your comment has been deleted.'
+    redirect_to @post, alert: 'Your comment was deleted.'
   end
 
   private
