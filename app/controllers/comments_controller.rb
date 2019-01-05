@@ -22,7 +22,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     post = @comment.post
     @comment.destroy
-    redirect_to @post, alert: 'Your comment was deleted.'
+    redirect_to posts_path(@post), alert: 'Your comment was deleted.'
   end
 
   private
