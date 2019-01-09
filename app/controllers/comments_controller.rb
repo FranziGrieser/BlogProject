@@ -23,7 +23,7 @@ class CommentsController < ApplicationController
     post = @comment.post
     @comment.destroy
     respond_to do |format|
-      format.html { redirect_to @post, alert: 'Your comment was deleted.' }
+      format.html { redirect_to post, alert: 'Your comment was deleted.' }
       format.json { head :no_content }
     end
   end
