@@ -27,6 +27,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 # Authorization via CanCan
 gem 'cancancan', '~> 2.2'
+# Admin Dashboard
+gem 'rails_admin'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
