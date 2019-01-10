@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A storytelling platform. A project to train the coding muscles and writing little pieces of stories.
 
-Things you may want to cover:
+Technology:
 
-* Ruby version
+* Ruby on Rails Web App
 
-* System dependencies
+* dynamic and static pages
 
-* Configuration
+* User authentication
 
-* Database creation
+* SQL database
 
-* Database initialization
+* Deployment to Heroku
 
-* How to run the test suite
+* Posts and Comments to be created by users, sorted by categories
 
-* Services (job queues, cache servers, search engines, etc.)
+* Mailers to Users
 
-* Deployment instructions
+* Contact form delivered through page -  E-Mails (SendGrid)
 
-* ...
+* still in progress...
