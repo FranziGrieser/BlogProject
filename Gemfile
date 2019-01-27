@@ -29,6 +29,10 @@ gem 'devise'
 gem 'cancancan', '~> 2.2'
 # Admin Dashboard
 gem 'rails_admin'
+# Carrierwave Uploader for Pictures
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick'
+#
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -61,6 +65,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'better_errors'
 end
 
 group :test do
