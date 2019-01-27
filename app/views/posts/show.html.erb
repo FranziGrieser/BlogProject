@@ -1,7 +1,14 @@
 <section class="container">
 
   <p>
-    <%= image_tag(@post.image, class: "img-fluid") %>
+    <% if @post.image? %>
+      <%= image_tag(@post.image, class: "img-fluid") %>
+    <% end %>
+  </p>
+  <p class="img-fluid">
+    <% if @post.picture? %>
+      <%= image_tag(@post.picture_url(:default).to_s, class: "img-fluid") %>
+    <% end %>
   </p>
     <h2><%= @post.title %></h2>
   <p>

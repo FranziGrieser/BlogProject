@@ -6,6 +6,8 @@
           <div class="card mb-4">
             <div class="card-block">
               <%= image_tag(post.image, class: "img-fluid") unless post.image.nil? %>
+              <%= image_tag(post.picture_url(:default).to_s, class: "img-fluid") unless post.picture.nil? %>
+
               <h5 class="card-title"><%= post.title %></h5>
               <p class="card-link"><%= link_to 'Read more', post %><% if can? :update, post %> | <%= link_to 'Edit', edit_post_path(post) %> | <% end %><% if can? :destroy, post %> <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></p>
             </div> <!-- /card-block-->

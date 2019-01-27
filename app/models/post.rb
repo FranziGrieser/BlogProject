@@ -1,6 +1,12 @@
 class Post < ApplicationRecord
   belongs_to :category
-  has_many :users
+  belongs_to :user
   has_many :comments
+
+  mount_uploader :picture, PictureUploader
+  serialize :picture, JSON # use for SQLite
+
   validates :title, :content, :category_id, presence: true
+
+
 end
