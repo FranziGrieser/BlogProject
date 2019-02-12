@@ -7,40 +7,86 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   flex-direction: column;
-  background-color: #fffeea;
+  background-image: image_url('swirl_pattern.png');
+  background-attachment: fixed;
+  // background-size: cover;
+  color: #343a40;
 }
 
 .container {
   min-height: 100px;
   flex: 1;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px auto 20px auto;
+  width: 75%;
+  background-color: #f8f9fa;
+
+}
+
+@media (min-width: 300px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 425px) {
+  .container {
+    width: 85%;
+  }
+}
+
+@media (min-wdth: 768px) {
+  .container {
+    width: 75%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 70%
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 60%
+  }
 }
 
 /**** Fonts ****/
-h1 {
+a h1 {
   font-family: 'Anton', Futura, Verdana, sans-serif;
   letter-spacing: 0.1em;
 }
 
+h1 {
+  font-family: 'Anton', Futura, Verdana, sans-serif;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
 h2 {
   font-family: Spinnaker, Futura, Verdana, sans-serif;
-  font-size: 22px;
+  font-size: 25px;
   font-style: normal;
   font-variant: normal;
-  font-weight: 700;
-  line-height: 23.4px;
+  font-weight: 600;
+  line-height: 120%;
 }
 
 p {
   font-family: "Architects Daughter", Spinnaker, Futura, Verdana, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   font-variant: normal;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 150%;
+  text-align: justify;
 }
 
+.date {
+  font-size: 16px;
+  text-align:right;
+}
 /***** shared Navs and Jumbotron *****/
 .navbar-brand {
   font-family: 'Anton', Futura, Verdana, sans-serif;
@@ -74,6 +120,10 @@ p {
   color: #fffeea;
   text-align: center;
   font-weight: 800;
+}
+
+.jumbotron p {
+  text-align: center;
 }
 
 .lead { font-weight: 800; }

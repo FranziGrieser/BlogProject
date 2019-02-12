@@ -1,48 +1,50 @@
-<%= form_with(model: post, local: true) do |form| %>
-  <% if post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this article from being saved:</h2>
+<div class="container">
+  <%= form_with(model: post, local: true) do |form| %>
+    <% if post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(post.errors.count, "error") %> prohibited this article from being saved:</h2>
 
-      <ul>
-      <% post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :image, "If you'd like to add an Image: (optional)" %>
+      <%= form.text_field :image, size: 30, class: "input form-control", placeholder: "Paste an image link" %>
+    </div>
+
+    <div class="field">
+      <%= form.label "If you'd like to upload a picture: (optional)" %>
+      <%= form.file_field :picture %>
+    </div>
+
+    <div class="field">
+      <%= form.label :category_id, "Select a category:" %>
+      <%= form.collection_select(:category_id, Category.all, :id, :name, {prompt: "Please select..."}) %>
+    </div>
+
+    <div class="field">
+      <%= form.label :title %>
+      <%= form.text_field :title, size: 30, class: "input form-control", placeholder: "Your title" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :intro %>
+      <%= form.text_area :intro, cols: 30, rows: 5, class: "input form-control", placeholder: "Your introduction" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :content %>
+      <%= form.text_area :content, cols: 30, rows: 15, class: "input form-control", placeholder: "Write your story here..." %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit(class: "btn btn-dark") %>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.text_field :image, size: 30, class: "input" %>
-  </div>
-
-  <div class="field">
-    <%= form.label "Upload a Picture" %>
-    <%= form.file_field :picture %>
-  </div>
-
-  <div class="field">
-    <%= form.label :category_id %>
-    <%= form.collection_select(:category_id, Category.all, :id, :name, {prompt: "Choose a category"}) %>
-  </div>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, size: 30, class: "input", placeholder: "Type the Post title here" %>
-  </div>
-
-  <div class="field">
-    <%= form.label :intro %>
-    <%= form.text_area :intro, cols: 30, rows: 5, class: "input", placeholder: "Type the Post introduction here" %>
-  </div>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content, cols: 30, rows: 15, class: "input", placeholder: "Type the Post content here" %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit(class: "btn btn-dark") %>
-  </div>
-
-<% end %>
+</div>

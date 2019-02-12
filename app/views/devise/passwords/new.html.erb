@@ -6,8 +6,8 @@
     <%= devise_error_messages! %>
 
     <div class="field">
-      <%= f.label :email %>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input", size: 30 %>
+      <%= f.label :email, "E-Mail:" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input form-control", placeholder: "Please enter your E-Mail-address" %>
     </div>
 
     <div class="actions">

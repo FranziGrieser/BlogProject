@@ -1,24 +1,21 @@
 <section class="container">
-  <div class="container posts">
-    <div class="row justify-content-center">
-      <div class="card-columns">
-        <% @posts.each do |post| %>
-          <div class="card mb-4">
-            <div class="card-block">
-              <%= image_tag(post.image, class: "img-fluid") unless post.image.nil? %>
-              <%= image_tag(post.picture_url(:default).to_s, class: "img-fluid") unless post.picture.nil? %>
-
-              <h5 class="card-title"><%= post.title %></h5>
-              <p class="card-link"><%= link_to 'Read more', post %><% if can? :update, post %> | <%= link_to 'Edit', edit_post_path(post) %> | <% end %><% if can? :destroy, post %> <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></p>
-            </div> <!-- /card-block-->
-          </div><!-- /card-->
-        <% end %>
-      </div> <!-- /col-->
-    </div> <!-- /row -->
+  <div class="posts">
+    <% @posts.each do |post| %>
+      <p class="date">
+        <em><%= (post.created_at).strftime("%B %e, %Y") %></em>
+      </p>
+      <h2><%= post.title %></h2>
+      <p><%= post.intro unless nil? %></p>
+      <p><%= post.content.truncate(300) %></p>
+      <p><%= link_to 'Read more', post %><% if can? :update, post %> | <%= link_to 'Edit', edit_post_path(post) %> | <% end %><% if can? :destroy, post %> <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></p>
+      <hr>
+    <% end %>
   </div> <!-- /container-posts-->
   <br>
   <div class="btn btn-light">
-   <%= link_to 'New Post', new_post_path %>
+    <% if signed_in? %>
+      <%= link_to 'New Post', new_post_path %>
+    <% end %>
   </div>
 <br><br>
 </section>

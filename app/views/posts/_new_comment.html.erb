@@ -1,16 +1,18 @@
-<% if signed_in? %>
-  <h2>Add a comment:</h2>
-  <%= form_for([@post, @post.comments.build], remote: true) do |f| %>
-    <div class="field">
-      <%= f.label :name, "Your Name:" %>
-      <%= f.text_field :name, size: 30, class: "input", placeholder: "Your Name", require: true %>
-    </div>
-    <div class="field">
-      <%= f.label :body, "Your Comment:" %>
-      <%= f.text_area :body, cols: 30, rows: 10, class:"input", placeholder: "Your Comment", require: true %>
-    </div>
-    <div class="actions">
-      <%= f.submit(class: "btn btn-dark") %>
-    </div>
+<div>
+  <% if signed_in? %>
+    <h2>Add a comment:</h2>
+    <%= form_for([@post, @post.comments.build], remote: true) do |f| %>
+      <div class="field">
+        <%= f.label :name, "Your name: (required)" %>
+        <%= f.text_field :name, size: 30, class: "input form-control", placeholder: "Your Name", require: true %>
+      </div>
+      <div class="field">
+        <%= f.label :body, "Your comment: (required)" %>
+        <%= f.text_area :body, cols: 30, rows: 10, class:"input form-control", placeholder: "Your Comment", require: true %>
+      </div>
+      <div class="actions">
+        <%= f.submit(class: "btn btn-dark") %>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
+</div>

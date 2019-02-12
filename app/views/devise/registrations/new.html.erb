@@ -6,18 +6,18 @@
     <%= devise_error_messages! %>
 
     <div class="field">
-      <%= f.label :user_name, "User Name" %>
-      <%= f.text_field :user_name, class: "input", size: 30 %>
+      <%= f.label :user_name, "User Name: (required)" %>
+      <%= f.text_field :user_name, class: "input form-control", size: 30, required: true %>
     </div>
 
     <div class="field">
-      <%= f.label :first_name, "First Name" %>
-      <%= f.text_field :first_name, class: "input", size: 30 %>
+      <%= f.label :first_name, "First Name:" %>
+      <%= f.text_field :first_name, class: "input form-control", size: 30, required: true %>
     </div>
 
     <div class="field">
-      <%= f.label :last_name, "Last Name" %>
-      <%= f.text_field :last_name, class: "input", size: 30 %>
+      <%= f.label :last_name, "Last Name:" %>
+      <%= f.text_field :last_name, class: "input form-control", size: 30, required: true %>
     </div>
 
 
