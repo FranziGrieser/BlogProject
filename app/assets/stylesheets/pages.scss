@@ -17,6 +17,7 @@ body {
   min-height: 100px;
   flex: 1;
   margin: 20px auto 20px auto;
+  padding: 35px 20px 35px 20px;
   width: 75%;
   background-color: #f8f9fa;
 
@@ -91,6 +92,7 @@ p {
 .navbar-brand {
   font-family: 'Anton', Futura, Verdana, sans-serif;
   letter-spacing: 0.1em;
+  color: #59594d !important;
 }
 
 .nav-item {
@@ -98,26 +100,28 @@ p {
   font-size: 18px;
   font-style: normal;
   font-variant: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 19.4px;
   padding: 10px;
+  color: #59594d !important;
+
 }
 
 .navbar {
-  background-color: #649EEE  !important;
+  background-color: #d9e083  !important;
 }
 
 .navbar a{
-  color: white;
+  color: #59594d !important;
   text-decoration: none;
 }
 
 .jumbotron {
-  background-image: image_url('1pic.jpg');
+  background-image: image_url('street_dark.jpg');
   background-attachment: fixed;
   background-size: cover;
-  height: 100%;
-  color: #fffeea;
+  height: 300px;
+  color: #59594d;
   text-align: center;
   font-weight: 800;
 }
@@ -125,8 +129,6 @@ p {
 .jumbotron p {
   text-align: center;
 }
-
-.lead { font-weight: 800; }
 
 /**** list-items ***/
 ul li {
@@ -136,16 +138,17 @@ ul li {
 
 /******* Links ****/
 nav a {
-  color: #000;
+  color: #efefe5;
 
   &:visited {
-    color: #fff;
+    color: #efefe5;
   }
 
   &:hover {
-    color: #0C558D;
+  //  color: #d9e083;
     background-color: transparent;
     text-decoration: none;
+    color: #59594d;
   }
 }
 
@@ -153,5 +156,9 @@ footer {
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
-  background-color: #649EEE !important;
+  background-color: #d9e083 !important;
+}
+
+footer p {
+  text-align: center;
 }
