@@ -10,8 +10,6 @@ Technology:
 
 * User authentication
 
-* SQL database
-
 * Deployment to Heroku
 
 * Posts and Comments to be created by users, sorted by categories
