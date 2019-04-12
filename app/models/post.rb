@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Post < ApplicationRecord
   belongs_to :category
   belongs_to :user
@@ -7,6 +9,4 @@ class Post < ApplicationRecord
   serialize :picture, JSON # use for SQLite
 
   validates :title, :content, :category_id, presence: true
-
-
 end
