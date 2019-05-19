@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CommentsController < ApplicationController
   load_and_authorize_resource
 
@@ -8,11 +10,11 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @post, notice: 'Your comment has been saved successfully.' }
+        format.html { redirect_to @post, notice: "Your comment has been saved successfully." }
         format.json { render :show, status: :created, location: @post }
         format.js
       else
-        format.html { redirect_to @post, alert: 'Your comment was not saved.' }
+        format.html { redirect_to @post, alert: "Your comment was not saved." }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
@@ -23,13 +25,14 @@ class CommentsController < ApplicationController
     post = @comment.post
     @comment.destroy
     respond_to do |format|
-      format.html { redirect_to post, alert: 'Your comment was deleted.' }
+      format.html { redirect_to post, alert: "Your comment was deleted." }
       format.json { head :no_content }
     end
   end
 
   private
-    def comment_params
-      params.require(:comment).permit(:user_id, :name, :body)
-    end
+
+  def comment_params
+    params.require(:comment).permit(:user_id, :name, :body)
+  end
 end

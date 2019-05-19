@@ -1,9 +1,10 @@
-RailsAdmin.config do |config|
+# frozen_string_literal: true
 
+RailsAdmin.config do |config|
   config.authorize_with do
-   redirect_to main_app.root_path unless warden.user.admin == true
+    redirect_to main_app.root_path unless warden.user.admin == true
   end
-  
+
   ### Popular gems integration
 
   ## == Devise ==
